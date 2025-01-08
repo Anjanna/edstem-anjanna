@@ -1,5 +1,7 @@
 import json
-from flask import request, Blueprint
+
+from flask import Blueprint, request
+
 from restaurant_api.app.services.user import User
 
 user_app = Blueprint("user", __name__, url_prefix="/user")

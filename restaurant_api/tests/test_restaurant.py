@@ -1,12 +1,11 @@
 import pytest
-from restaurant_api.app.services.restaurant import Restaurant
-from restaurant_api.app.models.models import Restaurant as RestaurantModel
-from restaurant_api.app.services.review import Review
-from restaurant_api.app.models.models import Review as ReviewModel
+
 from restaurant_api import create_app
-from restaurant_api.app.config import TestConfig
-from restaurant_api.app.config import db
+from restaurant_api.app.config import TestConfig, db
 from restaurant_api.app.exceptions import ValidationException
+from restaurant_api.app.services.restaurant import Restaurant
+from restaurant_api.app.services.review import Review
+
 
 @pytest.fixture(scope="session")
 def app():

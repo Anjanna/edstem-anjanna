@@ -1,10 +1,12 @@
 import datetime
+
 from sqlalchemy import func
+
 from restaurant_api.app.config import db
 from restaurant_api.app.models.models import Restaurant as RestaurantModel
-from restaurant_api.app.utils.utils import generate_uuid
-from restaurant_api.app.utils.utils import validate_api_input_payload
 from restaurant_api.app.schemas.schema import RestaurantSchema
+from restaurant_api.app.utils.utils import generate_uuid
+from restaurant_api.app.utils.utils import validate_api_input_payload                                            
 
 
 class Restaurant:

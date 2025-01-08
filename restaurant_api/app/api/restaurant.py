@@ -1,6 +1,8 @@
 import json
-from flask import request, Blueprint
+
+from flask import Blueprint, request
 from flask_jwt_extended import jwt_required
+
 from restaurant_api.app.services.restaurant import Restaurant
 from restaurant_api.app.utils.utils import requires_role
 

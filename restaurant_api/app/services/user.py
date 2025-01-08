@@ -1,8 +1,10 @@
 import datetime
+
 from flask_jwt_extended import create_access_token
+
+from restaurant_api.app.config import db
 from restaurant_api.app.models.models import User as UserModel
 from restaurant_api.app.utils.utils import generate_uuid
-from restaurant_api.app.config import db
 
 
 class User:

@@ -1,11 +1,13 @@
 import datetime
+
 from sqlalchemy import func
+
 from restaurant_api.app.config import db
-from restaurant_api.app.models.models import Review as ReviewModel
 from restaurant_api.app.models.models import Restaurant as RestaurantModel
+from restaurant_api.app.models.models import Review as ReviewModel
+from restaurant_api.app.schemas.schema import ReviewSchema
 from restaurant_api.app.utils.utils import generate_uuid
 from restaurant_api.app.utils.utils import validate_api_input_payload
-from restaurant_api.app.schemas.schema import ReviewSchema
 
 
 class Review:
@@ -42,7 +44,6 @@ class Review:
         This function returns the reviews of a restaurant from the database
         :param restaurant_id: contains the restaurant id 
         """
-        #TODO payload validation
         data = ReviewModel.query.filter_by(restaurant_id=restaurant_id).all()
         res = [
             {

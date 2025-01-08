@@ -1,4 +1,5 @@
 from sqlalchemy.dialects.postgresql import ENUM
+
 from restaurant_api.app.config import db
 
 price_range_enum = ENUM('LOW', 'MEDIUM', 'HIGH', name='price_range', create_type=True)

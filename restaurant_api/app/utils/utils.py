@@ -1,11 +1,13 @@
-import uuid
 import json
+import uuid
+from functools import wraps
+
 from flask import request
 from flask_jwt_extended import decode_token
-from functools import wraps
 from sqlalchemy import func
-from restaurant_api.app.models.models import User as UserModel
+
 from restaurant_api.app.exceptions import ValidationException
+
 
 def generate_uuid():
     return uuid.uuid4().hex
