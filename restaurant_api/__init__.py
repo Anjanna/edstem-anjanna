@@ -13,8 +13,9 @@ from restaurant_api.app.models.models import Restaurant, Review, User
 
 migrate = Migrate()
 
-def create_app(db_config):
+def create_app(db_config=None):
     app = Flask(__name__)
+    db_config = db_config if db_config else Config
     app.config.from_object(db_config)
     db.init_app(app)
     migrate.init_app(app, db)
