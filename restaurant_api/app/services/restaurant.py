@@ -31,9 +31,7 @@ class Restaurant:
         )
         db.session.add(restaurant)
         db.session.commit()
-        response = restaurant.to_dict()
-        print(f"response data {response}")
-        return response
+        return restaurant.to_dict()
 
     def get_restaurant(self,
                        page_number: int,
