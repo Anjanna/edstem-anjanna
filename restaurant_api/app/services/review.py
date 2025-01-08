@@ -3,6 +3,7 @@ import datetime
 from sqlalchemy import func
 
 from restaurant_api.app.config import db
+from restaurant_api.app.exceptions import ValidationException
 from restaurant_api.app.models.models import Restaurant as RestaurantModel
 from restaurant_api.app.models.models import Review as ReviewModel
 from restaurant_api.app.schemas.schema import ReviewSchema
@@ -44,6 +45,8 @@ class Review:
         This function returns the reviews of a restaurant from the database
         :param restaurant_id: contains the restaurant id 
         """
+        if not restaurant_id:
+            raise ValidationException()
         data = ReviewModel.query.filter_by(restaurant_id=restaurant_id).all()
         res = [
             {

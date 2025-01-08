@@ -25,7 +25,7 @@ def create_restaurant_review():
     return json.dumps(response)
 
 
-review_app.add_url_rule(rule="", endpoint="get_restaurant", view_func=get_restaurant_review,
+review_app.add_url_rule(rule="", endpoint="get_restaurant_review", view_func=get_restaurant_review,
                      methods=["GET"])
 review_app.add_url_rule(rule="", endpoint="create_restaurant", view_func=create_restaurant_review,
                      methods=["POST"])
