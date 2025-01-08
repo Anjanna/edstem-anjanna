@@ -1,4 +1,4 @@
-Restaurant Management System
+# Restaurant Management System
 
 The following is a simple architecture of the system
 ![image](https://github.com/user-attachments/assets/ec3b957c-8022-449a-be84-48ba606aa6a4)
@@ -26,6 +26,7 @@ Follow the steps to run this application.
 5. Create a database in postgres with the following command
    ```
    create database restaurantdb;
+   create database test;
    ```
 6. Run the migrations for the database with the following commands
    ```
