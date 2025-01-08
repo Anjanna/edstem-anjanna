@@ -1,7 +1,8 @@
 Restaurant Management System
 
 The following is a simple architecture of the system
-![image](https://github.com/user-attachments/assets/d64aebd4-5f59-4c57-8ab2-ebdaafe7a205)
+![image](https://github.com/user-attachments/assets/ec3b957c-8022-449a-be84-48ba606aa6a4)
+
 
 The video below explains in detail about the system and how it works.
 
