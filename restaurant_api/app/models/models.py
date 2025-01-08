@@ -1,4 +1,3 @@
-import datetime
 from sqlalchemy.dialects.postgresql import ENUM
 from restaurant_api.app.config import db
 
@@ -44,8 +43,8 @@ class Review(db.Model):
             column.name: getattr(self, column.name)
             for column in self.__table__.columns
         }
-        # review_dict['created_date'] = datetime.strftime("%Y-%m-%d %H:%M:%S")
-        # review_dict['updated_date'] = datetime.strftime("%Y-%m-%d %H:%M:%S")
+        review_dict['created_date'] = str(review_dict['created_date'])
+        review_dict['updated_date'] = str(review_dict['updated_date'])
         return review_dict
 
 
@@ -59,7 +58,10 @@ class User(db.Model):
 
     def to_dict(self):
         """Returns a dict representation of the User model"""
-        return {
+        user_dict = {
             column.name: getattr(self, column.name)
             for column in self.__table__.columns
         }
+        user_dict['created_date'] = str(user_dict['created_date'])
+        user_dict['updated_date'] = str(user_dict['updated_date'])
+        return user_dict
