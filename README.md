@@ -23,4 +23,18 @@ Follow the steps to run this application.
    - POSTGRES_DEV_URI (Postgres database URI)
    - JWT_DEV_SECRET (Secret key for the JWT token) 
 
+5. Create a database in postgres with the following command
+   ```
+   create database restaurantdb;
+   ```
+6. Run the migrations for the database with the following commands
+   ```
+   flask --app restaurant_api db init
+   flask --app restaurant_api db migrate
+   flask --app restaurant_api db upgrade
+   ```
+7. Finally run the flask application
+   ```
+   flask --app restaurant_api run
+   ```
 
