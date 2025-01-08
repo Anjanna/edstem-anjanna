@@ -14,5 +14,7 @@ EXPOSE 5432
 
 ENV FLASK_APP="restaurant_api:create_app"
 ENV FLASK_RUN_HOST=0.0.0.0
+ENV POSTGRES_DEV_URI=""
+ENV JWT_DEV_SECRET=""
 
 CMD ["flask", "run"]

@@ -45,6 +45,7 @@ class Review(db.Model):
             for column in self.__table__.columns
         }
         review_dict['created_date'] = str(review_dict['created_date'])
+        review_dict['visit_date'] = str(review_dict['visit_date'])
         review_dict['updated_date'] = str(review_dict['updated_date'])
         return review_dict
 

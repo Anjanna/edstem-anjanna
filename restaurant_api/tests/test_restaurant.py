@@ -14,6 +14,7 @@ def app():
     # setup database
     with app.app_context():
         db.create_all()
+
     yield app
 
     # teardown database
