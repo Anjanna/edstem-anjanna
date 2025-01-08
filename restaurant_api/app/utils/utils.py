@@ -3,6 +3,7 @@ import uuid
 from functools import wraps
 
 from flask import request
+from flask import jsonify
 from flask_jwt_extended import decode_token
 from sqlalchemy import func
 
@@ -30,7 +31,7 @@ def requires_role(required_role):
             user_role = token['role']
             # if user role is lower in the hierarchy, it is not enough to access the resource
             if user_role < required_role:
-                return json.dumps({"error": "Forbidden"})
+                return jsonify({"error": "Invalid access"}), 403
             
             return f(*args, **kwargs)
         return wrapped

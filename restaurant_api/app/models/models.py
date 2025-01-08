@@ -12,7 +12,7 @@ class Restaurant(db.Model):
     cuisine_type = db.Column(db.String(100), nullable=False)
     address = db.Column(db.Text, nullable=False)
     price_range = db.Column(price_range_enum, nullable=False)
-    average_rating = db.Column(db.Integer, nullable=True)
+    average_rating = db.Column(db.Integer, nullable=False)
     created_date = db.Column(db.Date, nullable=False)
     updated_date = db.Column(db.Date, nullable=False)
 

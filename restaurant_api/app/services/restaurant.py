@@ -26,6 +26,7 @@ class Restaurant:
             cuisine_type = payload['cuisine_type'],
             address = payload['address'],
             price_range = payload['price_range'],
+            average_rating = 0,
             created_date = self.now,
             updated_date = self.now
         )
